@@ -1,0 +1,34 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### Main.Customers
+GET {{server}}/odata/v4/main/Customers
+Content-Type: application/json
+{{auth}}
+
+### Main.Customers
+POST {{server}}/odata/v4/main/Customers
+Content-Type: application/json
+{{auth}}
+
+{
+  "name": "name-22629049",
+  "age": 11
+}
+
+### Main.Customers
+PATCH  {{server}}/odata/v4/main/Customers(3)
+Content-Type: application/json
+{{auth}}
+
+{
+  "name": "Carlos",
+  "age": 11
+}
+
+
+### Main.Customers
+DELETE  {{server}}/odata/v4/main/Customers(3)
+Content-Type: application/json
+{{auth}}
